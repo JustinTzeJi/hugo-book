@@ -1,0 +1,18 @@
+<h1> {{ partial "docs/title" . }} </h1>
+
+<style> 
+	.click-zoom input[type=checkbox] {
+	  display: none
+	}
+	.click-zoom merm-item {
+	  margin: 100px;
+	  transition: transform 0.25s ease;
+	  cursor: zoom-in
+	}
+	.click-zoom input[type=checkbox]:checked~.merm-item {
+	  transform: scale(1.5) translateY(15%);
+	  background-color: white;
+	  border:1px solid black;
+	  z-index: 10;
+	}
+	</style>

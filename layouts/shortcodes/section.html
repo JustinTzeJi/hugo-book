@@ -1,10 +1,11 @@
 <dl>
 {{ range .Page.Pages }}
-  <dt>
+  <hr> 
+  <dt style="font-size:24px">
     <a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a>
   </dt>
   <dd class="markdown-inner">
-    {{ default .Summary .Description }}
+    {{ default .Content | $.Page.RenderString -}}
   </dd>
 {{ end }}
 </dl>
