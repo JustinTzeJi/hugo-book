@@ -1,13 +1,15 @@
 <h1> {{ partial "docs/title" . }} </h1>
 
 <style> 
+	.click-zoom {
+		z-index: -10;
+	}
 	.click-zoom input[type=checkbox] {
 	  display: none
 	}
-	.click-zoom merm-item {
-	  margin: 100px;
+	.click-zoom .merm-item {
 	  transition: transform 0.25s ease;
-	  cursor: zoom-in
+	  cursor: zoom-in;
 	}
 	.click-zoom input[type=checkbox]:checked~.merm-item {
 	  transform: scale(1.5) translateY(15%);
